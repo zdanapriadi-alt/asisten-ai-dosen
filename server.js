@@ -11,7 +11,7 @@ require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
+app.set('trust proxy', 1);
 // ─── Config file (auto-create jika belum ada) ────────────────────────────────
 const CONFIG_PATH    = path.join(__dirname, 'config.json');
 const KNOWLEDGE_PATH = path.join(__dirname, 'knowledge.txt');
